@@ -1,0 +1,27 @@
+.profile-form {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .profile .ant-form-item {
+    margin-bottom: 10px;
+  }
+  .profile .btn-center {
+    padding-top: 20px;
+  }
+  .course-table .ant-table-content {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .ant-table-thead > tr > th:nth-child(1) {
+    min-width: 200px;
+  }
+  .ant-table-thead > tr > th:nth-child(3), .ant-table-thead > tr > th:nth-child(4) {
+    min-width: 140px;
+  }
+  .ant-table-thead > tr > th:nth-child(5) {
+    min-width: 160px;
+  }
+  .ant-table-thead > tr > th:nth-child(6) {
+    min-width: 100px;
+  }
+}

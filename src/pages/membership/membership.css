@@ -1,0 +1,23 @@
+.membership-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.membership-textPay {
+  font-size: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .membership-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .membership-top h3{
+    font-size: 20px;
+  }
+}

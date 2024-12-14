@@ -1,0 +1,118 @@
+.ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: hsl(63, 96%, 54%);
+}
+
+.ant-carousel .slick-dots .slick-dots-bottom {
+  margin-bottom: 12px;
+}
+
+#root > div.container-fluid > div:nth-child(3) > div.ant-col.ant-col-19.content-center > div > div > ul {
+  margin-bottom: 12px;
+}
+.ant-carousel .slick-dots-bottom {
+  bottom: 20px;
+}
+
+.reason {
+  display: flex;
+  gap: 0px;
+  padding: 5px;
+}
+.reason > * {
+  max-width: 25%;
+  padding: 10px;
+}
+.reason > div > .ant-card-bordered {
+  height: 100%;
+}
+.reason-wrapper {
+  background: #f4f4f4;
+}
+.reason-wrapper h1 {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+.carousel {
+  padding: 40px;
+}
+.carousel p  {
+  margin-bottom: 10px;
+}
+
+
+
+
+@media screen and (max-width:1280px) {
+  .reason {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .reason > * {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* .scroll-snap {
+    display: grid;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 20px;
+    justify-content: flex-start;
+    grid-auto-columns: 90%;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    gap: 20px;
+  } 
+  .scroll-snap > * {
+    scroll-snap-align: start;
+  } */
+   
+   .reason {
+    grid-template-columns: 1fr;
+    gap: 20px;
+   }
+  .course-title {
+    font-size: 20px;
+  }
+  .reason > * {
+    padding: 0;
+  }
+  .reason-wrapper h1 {
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1.4;
+  }
+  .reason {
+    padding: 0px 15px 15px;
+  }
+  .carousel p {
+    font-size: 18px;
+  }
+  .carousel h6 {
+    font-size: 16px;
+  }
+  .carousel {
+    padding: 20px;
+  }
+  .carousel-slider .slick-track {
+    display: flex;
+  }
+  .carousel-slider .slick-slide {
+    height: auto;
+  }
+  .carousel-slider .slick-slide > div {
+    height: 100%;
+  }
+  .carousel-slider .slick-slide:nth-child(4) p, .carousel-slider .slick-slide:nth-child(4) h6 {
+    color: #fff;
+  }
+  .carousel-slider .slick-slide > div > div {
+    height: 100%;
+  }
+}

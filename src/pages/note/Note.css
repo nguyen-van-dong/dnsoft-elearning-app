@@ -1,0 +1,17 @@
+.active {
+    background-color: #e1e1e1 !important;
+}
+
+.ant-modal-body {
+    padding-bottom: 0px;
+}
+
+.ant-comment {
+    margin-top: -10px
+}
+
+.item-note {
+    padding: 15px;
+    background: #f8f6fd;
+    color: black
+}

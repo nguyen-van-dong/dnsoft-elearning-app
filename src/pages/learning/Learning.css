@@ -1,0 +1,177 @@
+.lesson-item {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #fefefe;
+  margin-right: -16px;
+  margin-left: -16px;
+  cursor: pointer;
+}
+
+.lesson-first {
+  margin-top: -16px;
+}
+
+.lesson-last {
+  margin-bottom: -16px;
+}
+
+.lesson-item:hover {
+  background: #f1f1f1;
+}
+
+.course-content {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 14px 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  margin: 0px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header h5 {
+  margin: 0px;
+}
+.course-content::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+.course-content::-webkit-scrollbar-thumb {
+  background: rgb(223, 223, 223);
+}
+.ant-layout-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.sidebar-learning {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.content-learning {
+  flex-basis: 75%;
+  max-width: 75%;
+  padding-left: 20px;
+}
+.video-player > div {
+  height: 100% !important;
+}
+.video-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.footer-learning-btn button {
+  padding: 6px 20px;
+  height: fit-content;
+}
+.ant-drawer-right > .ant-drawer-content-wrapper {
+  width: 50% !important;
+}
+@media screen and (max-width: 768px) {
+  .header-learning {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header-learning > div:nth-child(2) {
+      justify-content: space-between;
+  }
+  .content-learning {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .learning > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .video-note {
+    margin-top: 10px;
+    gap: 0px
+  }
+  .video-note h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .ant-tabs-small > .ant-tabs-nav .ant-tabs-tab span {
+    font-size: 16px !important;
+  }
+  .sidebar-learning {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    background-color: #fff;
+  }
+  .sidebar-learning-active {
+    transform: translateY(0);
+  }
+  .sidebar-learning-active .course-content{
+    height: 100%;
+  }
+  .sidebar-learning-active .learning-top {
+    background-color: #fff;
+  }
+  .sidebar-learning-active .learning-top h5 {
+    margin: 0px;
+  }
+  .btn-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-sidebar span {
+    width: 16px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #000;
+    display: flex;
+  }
+  footer.ant-layout-footer {
+    padding: 15px 10px;
+    justify-content: space-between;
+  }
+  .footer-learning-btn {
+    gap: 10px !important
+  }
+  .learning-title {
+    position:relative;
+  }
+  .learning-top .btn-close-sidebar {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    left: auto;
+  }
+  .learning-top .btn-close-sidebar span {
+    width: 16px;
+  }
+  .guide {
+    display: none !important;
+  }
+  .ant-drawer-right > .ant-drawer-content-wrapper {
+    width: 80% !important;
+  }
+}
