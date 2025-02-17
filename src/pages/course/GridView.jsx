@@ -1,14 +1,14 @@
 import React from 'react'
 import { Image, Button, Col } from 'antd'
-import { StarOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-
+import CoursePrice from './../../components/Course/CoursePrice'
 
 function GridView({ courses }) {
   return (
     courses?.length > 0 ? courses?.map(item => (
       <Col
         key={item.id}
+        style={{marginBottom: 20}}
       >
         {
           <div className='course-list-image'>
@@ -40,23 +40,9 @@ function GridView({ courses }) {
             <>
             <strong>{item.author}</strong> -
             <span style={{ marginLeft: 10 }}>{item.lesson_count} bài học</span>
-            <div>
-              {
-                item.is_selling ? (
-                  <>
-                    <span style={{ textDecoration: 'line-through' }}>{item.price}₫</span> <StarOutlined style={
-                      {
-                        marginLeft: 5,
-                        marginRight: 5,
-                        color: '#87d068'
-                      }
-                    } />
-                    <strong style={{ color: '#f56a00' }}>{item.sale_price}₫</strong></>
-                ) : (
-                  <strong>MIỄN PHÍ</strong>
-                )
-              }
-            </div>
+            
+            <CoursePrice item={item}/>
+
             </>
           )
         }

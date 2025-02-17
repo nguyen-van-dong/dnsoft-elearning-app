@@ -1,11 +1,9 @@
 import React from 'react'
 import { Button, Col, Image, Row } from 'antd'
 import { Link } from 'react-router-dom'
-import { StarOutlined } from '@ant-design/icons';
+import CoursePrice from './CoursePrice';
 
 function Course({ courses }) {
-
-
   return (
     <Row className='course-list scroll-snap'>
       {
@@ -13,6 +11,7 @@ function Course({ courses }) {
           <Col
             key={item.id}
             className='course-list-item'
+            style={{marginBottom: 20}}
           >
             {
               <div className='course-list-image'>
@@ -32,6 +31,7 @@ function Course({ courses }) {
               paddingTop: 10,
               paddingRight: 10,
               cursor: 'pointer',
+              fontSize: 16
             }}><h3>
                 {
                   item.is_coming_soon ? <span style={{ color: '#1890ff' }}>{item.name}</span> : <Link to={`/courses/` + item.slug}>{item.name}</Link>
@@ -45,23 +45,9 @@ function Course({ courses }) {
                 <>
                   <strong>{item.author}</strong> -
                   <span style={{ marginLeft: 10 }}>{item.lesson_count} bài học</span>
-                  <div>
-                    {
-                      item.is_selling ? (
-                        <>
-                          <span style={{ textDecoration: 'line-through' }}>{item.price}₫</span> <StarOutlined style={
-                            {
-                              marginLeft: 5,
-                              marginRight: 5,
-                              color: '#87d068'
-                            }
-                          } />
-                          <strong style={{ color: '#f56a00' }}>{item.sale_price}₫</strong></>
-                      ) : (
-                        <strong>MIỄN PHÍ</strong>
-                      )
-                    }
-                  </div>
+                  
+                  <CoursePrice item={item}/>
+
                 </>
               )
             }

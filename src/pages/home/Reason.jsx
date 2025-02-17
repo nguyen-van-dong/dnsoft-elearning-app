@@ -15,6 +15,7 @@ function Reason({reasonsLearn}) {
               <Card
                 hoverable
                 cover={<img alt={item.name} src={item.image} />}
+                style={{fontSize: 15}}
               >
                 <Meta title={item.name} description={item.description} />
               </Card>

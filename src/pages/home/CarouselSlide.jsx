@@ -26,8 +26,8 @@ function CarouselSlide({ slides }) {
                 <Row className='carousel'>
                   <Col>
                     <h4>
-                      <p>{item.name}</p>
-                      <h6><i>{item.description}</i></h6>
+                      <p style={{fontSize: 30}}>{item.name}</p>
+                      <h6><i style={{fontSize: 20}}>{item.description}</i></h6>
                     </h4>
                     <Button type="primary" shape="round" size='large' onClick={() => naviageUrl(item.link)}>Xem Chi Tiết</Button>
                   </Col>

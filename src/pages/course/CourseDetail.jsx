@@ -77,7 +77,7 @@ function CourseDetail() {
     })
       .then(function (response) {
         console.log({ response });
-        setVideo(URL.createObjectURL(response.data));
+        // setVideo(URL.createObjectURL(response.data));
       })
       .catch(function (error) {
         // handle error

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Avatar, Badge, Button, Col, Divider, Image, Row } from 'antd'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllSliders, getAllReasonsLearn } from './homeSlice';
@@ -7,7 +7,7 @@ import { getAllPosts } from '../post/postSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import { convertToSlug, showPostDetail } from '../../utils/common';
 import { getAllCourses } from '../course/courseSlice';
-import { UserOutlined, EyeOutlined, SendOutlined } from '@ant-design/icons';
+import { UserOutlined, SendOutlined } from '@ant-design/icons';
 import { Helmet } from 'react-helmet';
 import CarouselSlide from './CarouselSlide';
 import Course from './Course';
@@ -101,6 +101,7 @@ function Home() {
                 <Col
                   key={item.id}
                   className='course-list-item'
+                  style={{marginBottom: 10}}
                 >
                   {
                     <div className='course-list-image'>
@@ -123,7 +124,9 @@ function Home() {
                     paddingTop: 10,
                     paddingLeft: 10,
                     paddingRight: 10
-                  }}><h3><Link to={`/courses/` + convertToSlug(item.url)}>{item.name}</Link></h3></p>
+                  }}><h3 style={{
+                    fontSize: 18
+                  }}><Link to={`/courses/` + convertToSlug(item.url)}>{item.name}</Link></h3></p>
                   <Avatar
                     style={{
                       backgroundColor: '#f56a00',
@@ -149,11 +152,10 @@ function Home() {
         }}>
         <h1 className='course-title' style={{ fontWeight: 700 }}>Bài Viết Mới Nhất</h1>
       </Badge>
-      
 
       <Divider dashed />
       <Row style={{ marginTop: 30 }}>
-        <Col span={24} style={{ fontSize: 16, background: '#f4f4f4', padding: 20 }}>
+        <Col span={24} style={{ fontSize: 17, background: '#f4f4f4', padding: 20, lineHeight: 1.8 }}>
           <h2 style={{ textTransform: 'uppercase', textAlign: 'center' }} className='course-title'><strong>Trở thành Giảng viên tại DnSoft eLearning</strong></h2>
           <div>
             Bạn có kiến thức chuyên môn sâu rộng? Bạn muốn chia sẻ kiến thức và kinh nghiệm của mình với người học trên toàn thế giới?
