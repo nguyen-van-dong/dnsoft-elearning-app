@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Col, Image, Row, Typography } from 'antd'
 import { useDispatch, useSelector } from 'react-redux';
 import Parser from 'html-react-parser';
@@ -12,7 +12,7 @@ function AboutMe() {
     if (!aboutMe?.data) {
       dispatch(getAboutMe());
     }
-  }, [dispatch])
+  }, [dispatch, aboutMe])
 
   return (
     <Row className='aboutMe'>

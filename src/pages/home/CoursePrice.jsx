@@ -1,4 +1,3 @@
-import React from 'react'
 import { StarOutlined } from '@ant-design/icons';
 
 function CoursePrice({ item }) {

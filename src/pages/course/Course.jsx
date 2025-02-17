@@ -36,7 +36,7 @@ function Course() {
     if (!categories?.data) {
       dispatch(getAllCourseCategory());
     }
-  }, [dispatch]);
+  }, [dispatch, categories?.data]);
 
   let data = []
   if (resultCourses?.courses) {
@@ -123,7 +123,6 @@ function Course() {
                   <ListView data={data} />
                   <GoToTop />
                 </Col>
-              // {/* <Pagination current={currentPage} onChange={onChange} total={total} /> */}
             }
           </Row>
         )

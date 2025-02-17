@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button, Col, Image, Row, Space, Typography } from 'antd';
 import {
   PlayCircleFilled,
@@ -8,9 +8,7 @@ import Parser from 'html-react-parser';
 const { Title } = Typography;
 
 function Info({ course }) {
-
   const [showShortIntro, setShowShortIntro] = useState(true);
-
   return (
     <div className='course-detail-info'>
       <Row>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Col, Image, Row } from 'antd'
 import { Link } from 'react-router-dom'
 import CoursePrice from './CoursePrice';

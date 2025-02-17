@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Row, Tabs } from 'antd'
 import { useSelector } from 'react-redux';
 import Login from './Login';

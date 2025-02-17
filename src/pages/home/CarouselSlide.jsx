@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Carousel, Col, Row } from 'antd'
 
 function CarouselSlide({ slides }) {

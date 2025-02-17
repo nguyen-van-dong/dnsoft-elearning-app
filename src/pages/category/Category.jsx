@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 import {
   BlockOutlined,
@@ -26,13 +26,13 @@ function Category() {
     if (!categories?.data) {
       dispatch(getAllCategories());
     }
-  }, [dispatch]);
+  }, [dispatch, categories]);
 
   useEffect(() => {
     if (!courseCategories?.data) {
       dispatch(getAllCourseCategory());
     }
-  }, [dispatch]);
+  }, [dispatch, courseCategories]);
 
   const showPostInCategory = (item) => {
     useLocalStorage(LOCAL_KEY_CATEGORY, JSON.stringify(item.id))
@@ -77,7 +77,7 @@ function Category() {
         ) : (
           <Row style={styles.styleRow}>
             {
-              courseCategories?.data?.map((item, index) => (
+              courseCategories?.data?.map((item) => (
                 <Col
                   span={4}
                   key={item.id}
@@ -93,7 +93,7 @@ function Category() {
             }
             <Divider dashed orientation="center">DANH MỤC BÀI VIẾT</Divider>
             {
-              categories?.data?.map((item, index) => (
+              categories?.data?.map((item) => (
                 <Col
                   span={4}
                   key={item.id}

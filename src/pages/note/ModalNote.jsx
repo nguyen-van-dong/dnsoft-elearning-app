@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Note.css';
-import { Button, Form, Input, Modal, Space } from 'antd'
+import { Modal } from 'antd'
 import { notification } from 'antd';
 import { useDispatch } from 'react-redux';
 import { createNote } from './noteSlice';
-const { TextArea } = Input;
 
 const openNotification = (placement) => {
   notification.success({
@@ -18,11 +17,6 @@ function ModalNote({timeSeconds, timeIso, lesson, openModalNote, setOpenModalNot
   const [submitting, setSubmitting] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [content, setContent] = useState('');
-
-  const onChange = (e) => {
-    setContent(e.target.value);
-    setDisabled(false);
-  }
 
   const onHandleSubmit = () => {
     if (!content) return;

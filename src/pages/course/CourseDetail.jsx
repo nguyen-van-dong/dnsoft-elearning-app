@@ -77,7 +77,6 @@ function CourseDetail() {
     })
       .then(function (response) {
         console.log({ response });
-        // setVideo(URL.createObjectURL(response.data));
       })
       .catch(function (error) {
         // handle error
@@ -106,7 +105,7 @@ function CourseDetail() {
                   {
                     course?.data?.course_purpose &&
                     course?.data?.course_purpose.map((item, idx) =>
-                      <React.Fragment key={idx} >
+                      <React.Fragment key={item.url} >
                         <div className={`purpose_item ${idx === 0 ? 'purpose_item_first' : ''} ${idx === course?.data?.course_purpose.length - 1 ? 'purpose_item_last' : ''}`}>
                           <CheckCircleTwoTone key={idx} twoToneColor="#52c41a" style={{ marginRight: 15, fontSize: 'larger' }} />{item}<br />
                         </div>

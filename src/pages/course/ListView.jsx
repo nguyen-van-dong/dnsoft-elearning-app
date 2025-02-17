@@ -4,17 +4,6 @@ import { VideoCameraAddOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { getAvatar } from '../../utils/common';
 
-const styles = {
-  btnViewDetail: {
-    backgroundColor: 'white',
-    borderRadius: 20,
-    border: '1px solid black',
-    color: 'black',
-    paddingTop: 9,
-    paddingBottom: 30,
-  },
-}
-
 const IconText = ({ icon, text, style }) => (
   <Space style={style}>
     {React.createElement(icon)}

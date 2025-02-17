@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Button, Col, Form, Input, Row, Tabs } from 'antd'
+import  { useEffect } from 'react'
+import { Button, Form, Input } from 'antd'
 import { setMessErrVerify, verify } from './authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   FacebookFilled,
   GoogleSquareFilled,
@@ -35,11 +35,6 @@ function Login() {
       if (messageErrLogin.invalid) {
         toast.error(messageErrLogin.invalid[0]);
       }
-      // console.log({ messageErrLogin });
-      // const messageErr = JSON.parse(messageErrLogin);
-      // if (typeof messageErr == 'object' && messageErr.message) {
-      //   toast.error(messageErr.message);
-      // }
     }
   }, [messageErrLogin]);
 

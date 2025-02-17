@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Button, Col, Form, Input, Row, Steps } from 'antd'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
@@ -17,7 +17,7 @@ function ProccessMembership() {
 
   useEffect(() => {
     dispatch(getPackageById(id));
-  }, [id]);
+  }, [id, dispatch]);
 
   const onSubmitInformation = (values) => {
     const data = { ...values }
@@ -167,7 +167,7 @@ function ProccessMembership() {
               <span style={{ float: 'right' }}><strong>{packageItem?.data?.total}₫</strong></span>
             </div>
           </Col>
-          <Row style={{ background: 'rgb(244, 244, 244)', padding: 20, background: 'rgb(244, 244, 244)' }}>
+          <Row style={{ background: 'rgb(244, 244, 244)', padding: 20 }}>
             <Col span={24}>
               <h3><u>Mô tả gói hội viên</u></h3>
               {packageItem?.data?.content ? HTMLReactParser(packageItem?.data?.content) : ''}

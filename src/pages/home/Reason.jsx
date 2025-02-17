@@ -1,10 +1,7 @@
-import React from 'react'
 import { Card, Col, Row } from 'antd';
 const { Meta } = Card;
 
 function Reason({reasonsLearn}) {
-
-
   return (
     <div className='reason-wrapper'>
       <h1> LÝ DO BẠN NÊN HỌC ONLINE TẠI DNSOFT ELEARNING</h1>

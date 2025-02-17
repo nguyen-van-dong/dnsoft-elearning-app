@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Row, Typography } from 'antd'
 import Title from 'antd/lib/typography/Title'
 import Paragraph from 'antd/lib/typography/Paragraph'

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button, Col, Row, notification, Typography, Divider, Badge } from 'antd';
@@ -24,7 +24,7 @@ function Membership() {
     if (!memberships?.data) {
       dispatch(getAllMemberships());
     }
-  }, [])
+  }, [dispatch, memberships])
 
   useEffect(() => {
     if (messageSucess) {
@@ -42,14 +42,7 @@ function Membership() {
         duration: 10
       });
     };
-  }, [messageSucess, messageError])
-
-  const style = {
-    input: {
-      borderRadius: '7px',
-      width: '50%'
-    }
-  }
+  }, [messageSucess, messageError, navigate])
 
   return (
     <div>

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Avatar, BackTop, Col, List, Row, Spin, Tag, Typography } from 'antd';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LikeOutlined, MessageOutlined, ToTopOutlined } from '@ant-design/icons';
 import IconText from '../../components/IconText';
-import { getAllCategories, getCategoryBySlug, getPostsByCategory } from './categorySlice';
+import { getAllCategories, getPostsByCategory } from './categorySlice';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import { LOCAL_KEY_CATEGORY } from '../../const/common';
 import { convertToSlug, getAvatar, showPostDetail, showPostInCategory } from '../../utils/common';
@@ -31,19 +31,16 @@ function CategoryDetail() {
   const categories = useSelector(state => state.category.entities)
   const categoryId = useLocalStorage(LOCAL_KEY_CATEGORY);
 
-  // useEffect( () => {
-  //   dispatch(getCategoryBySlug(category?.id));
-  // }, [slug, dispatch]);
 
   useEffect(() => {
     dispatch(getPostsByCategory(categoryId))
-  }, [slug, dispatch]);
+  }, [slug, dispatch, categoryId]);
 
   useEffect(() => {
     if (!categories?.data) {
       dispatch(getAllCategories());
     }
-  }, [dispatch]);
+  }, [dispatch, categories]);
 
   let data = []
   if (posts) {
@@ -114,8 +111,8 @@ function CategoryDetail() {
             </Col>
             <Col span={6}>
             {
-              categories.data && categories.data.map((item, index) => (
-              <Tag key={index} style={{ padding: 5, margin: 5, paddingLeft: 15, paddingRight: 15, borderRadius: 15 }}>
+              categories.data && categories.data.map((item) => (
+              <Tag key={item.url} style={{ padding: 5, margin: 5, paddingLeft: 15, paddingRight: 15, borderRadius: 15 }}>
                 <Link to={'/categories/'+ convertToSlug(item.url)} onClick={() => showPostInCategory(item)}>{item.name}</Link>
               </Tag>
               ))

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, Col, Form, Typography, Input, Row, notification } from 'antd'
 import './contact.css'
 import {
@@ -36,7 +36,7 @@ function Contact() {
       form.resetFields();
       dispatch(setFalseSentContact());
     }
-  }, [sentContact, dispatch])
+  }, [sentContact, dispatch, form])
 
   useEffect(() => {
     if (messageErrSubmit) {
@@ -147,7 +147,7 @@ function Contact() {
           </Form>
         </Col>
         <Col>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.731238078923!2d108.24205817541343!3d16.02750034055313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421750a4dd42b5%3A0x393f7aa53d214f1!2zODUgxJAuIE5ndXnhu4VuIMSQw6xuaCBDaGnhu4N1LCBLaHXDqiBN4bu5LCBOZ8WpIEjDoG5oIFPGoW4sIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1690814736806!5m2!1svi!2s" width="100%" height="400" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title='Map to DnSoft' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.731238078923!2d108.24205817541343!3d16.02750034055313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421750a4dd42b5%3A0x393f7aa53d214f1!2zODUgxJAuIE5ndXnhu4VuIMSQw6xuaCBDaGnhu4N1LCBLaHXDqiBN4bu5LCBOZ8WpIEjDoG5oIFPGoW4sIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1690814736806!5m2!1svi!2s" width="100%" height="400" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </Col>
       </Row>
       <Row>

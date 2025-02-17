@@ -1,5 +1,3 @@
-import React from 'react'
-
 function QuizLesson({currentLesson}) {
   return (
     <div>QuizLesson is comming soon</div>

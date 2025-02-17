@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Button, Col, Row, Typography, notification } from 'antd'
 import { useDispatch, useSelector } from 'react-redux';
 import { loadQrCode, createTransaction, handleClickFinished, setNullErrorCreateOrder, setNullPayment } from './orderSlice';
